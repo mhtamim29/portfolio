@@ -92,18 +92,6 @@ export const skills = [
 export const projects = [
   {
     index: "01",
-    title: "CRESIFY",
-    subtitle: "Multi-Vendor E-Commerce Platform",
-    description:
-      "Designed a scalable multi-vendor platform covering three distinct user roles — buyer, seller, and service provider — each with a tailored flow. Delivered 30+ screens with a reusable component library, reducing design duplication across breakpoints.",
-    links: [
-      { type: "figma", label: "Figma", url: "https://www.figma.com/design/B6NdR0OTPEfGQ1ssz8jauL/Cresify?node-id=0-1&t=iABe26PSSzjeCtTM-1" }, // ← update
-      { type: "live", label: "Live link", url: "https://cresify.com/" }, // ← update
-      { type: "caseStudy", label: "Case Study", url: "https://www.behance.net/gallery/244518373/Cresify-A-Multivendor-and-service-Provide-Platform#" }, // ← update
-    ],
-  },
-  {
-    index: "02",
     title: "RENEWABLY UK",
     subtitle: "Insurance & Compliance Dashboard",
     description:
@@ -115,7 +103,41 @@ export const projects = [
     ],
   },
   {
+    index: "02",
+    title: "Farrior Homes",
+    subtitle:
+      "A full-featured real estate marketplace with public listings, premium profiles, and a system admin panel",
+    description:
+      'Michaelfarrior is a comprehensive real estate platform designed for property buyers, sellers, and agents. The project covers three distinct user tiers — a public-facing free profile, a premium subscription experience, and a system admin panel — each with tailored UI flows. The design includes a public landing page with property discovery, blog, and "Why Choose Us" sections; a property listings page with advanced filters (price range, property type, location, bedrooms, bathrooms, square footage); authenticated user profiles with dashboard, saved properties, document management, and messaging; and a full admin panel for user, property, service, and blog management.',
+    links: [
+      { type: "figma", label: "Figma", url: "https://figma.com/" },
+      { type: "live", label: "Live link", url: "https://renewably.energy/" },
+      { type: "caseStudy", label: "Case Study", url: "#" },
+    ],
+  },
+
+  {
     index: "03",
+    title: "CRESIFY",
+    subtitle: "Multi-Vendor E-Commerce Platform",
+    description:
+      "Designed a scalable multi-vendor platform covering three distinct user roles — buyer, seller, and service provider — each with a tailored flow. Delivered 30+ screens with a reusable component library, reducing design duplication across breakpoints.",
+    links: [
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/B6NdR0OTPEfGQ1ssz8jauL/Cresify?node-id=0-1&t=iABe26PSSzjeCtTM-1",
+      }, // ← update
+      { type: "live", label: "Live link", url: "https://cresify.com/" }, // ← update
+      {
+        type: "caseStudy",
+        label: "Case Study",
+        url: "https://www.behance.net/gallery/244518373/Cresify-A-Multivendor-and-service-Provide-Platform#",
+      }, // ← update
+    ],
+  },
+  {
+    index: "04",
     title: "ART NEIDICH",
     subtitle: "Property Inspection Platform",
     description:
@@ -127,20 +149,8 @@ export const projects = [
     ],
   },
   {
-    index: "04",
-    title: "SUSTAINABLE ENERGY SOLUTIONS",
-    subtitle: "Renewable Energy Project Management",
-    description:
-      "Designed a project management tool for renewable energy initiatives, focusing on sustainability metrics and stakeholder collaboration. Created intuitive dashboards for tracking project progress, resource allocation, and environmental impact.",
-    links: [
-      { type: "figma", label: "Figma", url: "https://figma.com/" },
-      { type: "live", label: "Live link", url: "#" },
-      { type: "caseStudy", label: "Case Study", url: "#" },
-    ],
-  },
-  {
     index: "05",
-    title: "GREEN TECH SOLUTIONS",
+    title: "Surf Share",
     subtitle: "Sustainable Technology Platform",
     description:
       "Designed a platform for sustainable technology solutions, focusing on user engagement and environmental impact. Developed user-friendly interfaces for exploring eco-friendly products and services, with an emphasis on accessibility and visual appeal.",
