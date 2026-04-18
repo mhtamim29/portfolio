@@ -56,7 +56,7 @@ export default function Navbar() {
         {/* Hire Me Button */}
         <button
           onClick={handleHireMe}
-          className='hidden md:block bg-foreground text-white font-dm-sans font-medium text-[13px] uppercase tracking-wide px-5 py-2 rounded-full hover:bg-foreground/80 transition-colors duration-200'>
+          className='hidden md:block bg-foreground text-white font-dm-sans font-medium text-[13px] uppercase tracking-wide px-5 py-2 rounded-full hover:bg-foreground/80 transition-colors duration-200 cursor-pointer'>
           HIRE ME
         </button>
 
