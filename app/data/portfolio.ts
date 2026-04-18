@@ -35,7 +35,7 @@ export const siteConfig = {
 export const stats = [
   { value: "20+", label: "Clients Served" },
   { value: "7+", label: "Projects Handled" },
-  { value: "2+", label: "Years Experience" },
+  { value: "1+", label: "Years Experience" },
 ];
 
 // ── Skills ───────────────────────────────────────────────────
@@ -113,7 +113,7 @@ export const projects = [
   },
   {
     index: "02",
-    title: "Farrior Homes",
+    title: "FARRIOR HOMES",
     subtitle:
       "A full-featured real estate marketplace with public listings, premium profiles, and a system admin panel",
     description:
@@ -130,10 +130,28 @@ export const projects = [
   },
   {
     index: "03",
-    title: "CRESIFY",
-    subtitle: "Multi-Vendor E-Commerce Platform",
+    title: "SURF SHARE",
+    subtitle:
+      "A surf photography marketplace connecting wave riders and photographers across global surf destinations",
     description:
-      "Designed a scalable multi-vendor platform covering three distinct user roles — buyer, seller, and service provider — each with a tailored flow. Delivered 30+ screens with a reusable component library, reducing design duplication across breakpoints.",
+      "SurfShare is a multi-role surf photography platform designed for surfers, photographers (contributors), moderators, and admins. The project spans five distinct user experiences — a public-facing website landing page, contributor flows, a logged-in user portal, a moderator dashboard, and a full admin panel. The design includes a public landing page with featured destinations, a gallery with advanced filtering, an interactive surf spot map, and a contributor section; authenticated user flows covering favorites, downloads, and purchase/cart functionality; a contributor signup and photo submission workflow; a moderator panel for content review and approval; and a system admin panel for platform management — all unified under a coastal, photography-driven visual identity.",
+    links: [
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/5b824JDzPaejU3Nmg9OlLl/Surf-Share?node-id=2-4&t=E8BkfRYrbJmWEGbB-1",
+      },
+      // { type: "live", label: "Live link", url: "#" },
+      // { type: "caseStudy", label: "Case Study", url: "#" },
+    ],
+  },
+  {
+    index: "04",
+    title: "CRESIFY",
+    subtitle:
+      "A multi-vendor e-commerce and service provider platform with buyer, seller, service provider and admin experiences across web and mobile",
+    description:
+      "Cresify is a comprehensive multi-vendor e-commerce and service provider platform designed to support three core user roles — buyers, sellers, service provider and platform administrators. The design covers a public-facing storefront with product discovery, category browsing, and advanced filtering; a seller dashboard for inventory management, order tracking, and analytics; and a full admin panel for vendor approvals, dispute resolution, and platform oversight. The project emphasizes a clean, conversion-focused UI with consistent design tokens, responsive layouts, and streamlined checkout and onboarding flows.",
     links: [
       {
         type: "figma",
@@ -149,39 +167,41 @@ export const projects = [
     ],
   },
   {
-    index: "04",
-    title: "ART NEIDICH",
-    subtitle: "Property Inspection Platform",
-    description:
-      "Designed a structured inspection workflow platform enabling field teams to log, track, and report property conditions. Focused on reducing cognitive load across complex data-entry flows through clear information hierarchy and guided UI patterns.",
-    links: [
-      { type: "figma", label: "Figma", url: "https://figma.com/" },
-      { type: "live", label: "Live link", url: "#" },
-      { type: "caseStudy", label: "Case Study", url: "#" },
-    ],
-  },
-  {
     index: "05",
-    title: "Surf Share",
-    subtitle: "Sustainable Technology Platform",
+    title: "ART NEIDICH",
+    subtitle:
+      "A dual-role mobile inspection platform for admins and field inspectors, with job management, reporting, and real-time notifications",
     description:
-      "Designed a platform for sustainable technology solutions, focusing on user engagement and environmental impact. Developed user-friendly interfaces for exploring eco-friendly products and services, with an emphasis on accessibility and visual appeal.",
+      "Art Neidich is a property inspection mobile application designed for two distinct user roles — admins and field inspectors. The admin side covers a comprehensive dashboard with job summaries (total, pending, overdue, and completed today), a full job management system with job creation, filtering, and status tracking, label management, and a notification center. The inspector side features a streamlined workflow for conducting property inspections, annotating findings, capturing and attaching photos, adding location data, and submitting verification reports. The app also includes profile and settings management, an alert and review system, and a clean navigation structure optimized for on-the-go field use.",
     links: [
-      { type: "figma", label: "Figma", url: "https://figma.com/" },
-      { type: "live", label: "Live link", url: "#" },
-      { type: "caseStudy", label: "Case Study", url: "#" },
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/1fkJtBz7Knqd1YOcOQHXwY/artneidich?node-id=5-128&t=iji7SkVizJ86t5DQ-1",
+      },
+      // { type: "live", label: "Live link", url: "#" },
+      // { type: "caseStudy", label: "Case Study", url: "#" },
     ],
   },
   {
     index: "06",
-    title: "ECO INNOVATIONS",
-    subtitle: "Environmental Technology Solutions",
+    title: "SPORT PICKS",
+    subtitle:
+      "A modern sports analytics platform delivering data-driven insights, predictions, and performance tracking for smarter decision-making",
     description:
-      "Designed a platform for environmental technology solutions, focusing on user engagement and sustainability. Created intuitive interfaces for exploring eco-friendly products and services, with an emphasis on accessibility and visual appeal.",
+      "SportPicks is a sleek and intuitive sports analytics platform designed to help users make informed decisions through real-time data, predictive insights, and performance metrics. The project focuses on delivering a clean, engaging user experience while handling complex sports data in an accessible way. It features a dynamic dashboard with match insights, statistical breakdowns, and trend analysis; prediction modules powered by historical data; and user-focused interfaces for tracking performance, favorite teams, and betting insights. The design emphasizes clarity, speed, and usability, combining modern UI aesthetics with functional depth to support both casual fans and serious analysts.",
     links: [
-      { type: "figma", label: "Figma", url: "https://figma.com/" },
-      { type: "live", label: "Live link", url: "#" },
-      { type: "caseStudy", label: "Case Study", url: "#" },
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/w0FlH1VrL9wcpiLB45N2AP/badbyzdmxx?node-id=2-3&t=QiWMuHd0aAan514g-1",
+      },
+      // { type: "live", label: "Live link", url: "#" },
+      {
+        type: "caseStudy",
+        label: "Case Study",
+        url: "https://www.behance.net/gallery/244275909/SportPicks-A-Modern-Sports-Analytics-Platform",
+      },
     ],
   },
 ];
