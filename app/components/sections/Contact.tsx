@@ -23,6 +23,10 @@ export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
   );
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof FormState, string>>
+  >({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -32,36 +36,57 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.MouseEvent) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
+    setSubmitError(null);
+    setErrors({});
+
+    const fieldErrors: Partial<Record<keyof FormState, string>> = {};
+    if (!form.name.trim()) fieldErrors.name = "Full name is required.";
+    if (!form.email.trim()) fieldErrors.email = "Email address is required.";
+    if (!form.message.trim()) fieldErrors.message = "Message is required.";
+
+    if (Object.keys(fieldErrors).length > 0) {
+      setErrors(fieldErrors);
+      return;
+    }
 
     setStatus("sending");
 
-    // ── EMAIL INTEGRATION ─────────────────────────────────────────────────────
-    // This form sends via mailto: by default. To use a real service like
-    // Formspree, EmailJS, or Resend, replace the block below.
-    //
-    // Option 1 – Formspree (free tier available):
-    //   1. Sign up at formspree.io, create a form, get your endpoint ID
-    //   2. Replace YOUR_FORM_ID below
-    //   const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(form),
-    //   })
-    //   if (res.ok) setStatus('sent'); else setStatus('error')
-    //
-    // Option 2 – EmailJS:
-    //   See: https://www.emailjs.com/docs/examples/reactjs/
-    // ─────────────────────────────────────────────────────────────────────────
+    try {
+      const response = await fetch("/api/contact-me", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
 
-    // Default: open mailto link
-    const mailtoLink = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-      form.subject || "Portfolio Inquiry",
-    )}&body=${encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
-    )}`;
-    window.location.href = mailtoLink;
-    setStatus("sent");
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setStatus("sent");
+        setForm({ name: "", email: "", subject: "", message: "" });
+        setErrors({});
+        setSubmitError(null);
+      } else {
+        setStatus("error");
+        if (result.message && typeof result.message === "object") {
+          setErrors(result.message);
+        } else {
+          setSubmitError(
+            typeof result.message === "string"
+              ? result.message
+              : "Unable to send message. Please try again later.",
+          );
+        }
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setStatus("error");
+      setSubmitError("Unable to send message. Please try again later.");
+    }
+
     setTimeout(() => setStatus("idle"), 3000);
   };
 
@@ -95,8 +120,12 @@ export default function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder='Your full name'
+                  aria-invalid={Boolean(errors.name)}
                   className={inputClass}
                 />
+                {errors.name ? (
+                  <p className='text-sm text-rose-500'>{errors.name}</p>
+                ) : null}
               </div>
 
               {/* Email */}
@@ -110,8 +139,12 @@ export default function Contact() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder='your@email.com'
+                  aria-invalid={Boolean(errors.email)}
                   className={inputClass}
                 />
+                {errors.email ? (
+                  <p className='text-sm text-rose-500'>{errors.email}</p>
+                ) : null}
               </div>
 
               {/* Subject */}
@@ -140,8 +173,12 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder='Tell me about your project...'
                   rows={5}
+                  aria-invalid={Boolean(errors.message)}
                   className={`${inputClass} resize-none`}
                 />
+                {errors.message ? (
+                  <p className='text-sm text-rose-500'>{errors.message}</p>
+                ) : null}
               </div>
 
               {/* Submit */}
@@ -156,6 +193,14 @@ export default function Contact() {
                     : "Send Message"}
                 <SendHorizontal size={16} strokeWidth={1.5} />
               </button>
+              {status === "sent" ? (
+                <p className='mt-3 text-sm text-green-700'>
+                  Mail sent successfully! I will get back to you soon.
+                </p>
+              ) : null}
+              {submitError ? (
+                <p className='mt-3 text-sm text-rose-500'>{submitError}</p>
+              ) : null}
             </div>
 
             {/* Contact info */}
