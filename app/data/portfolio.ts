@@ -237,37 +237,37 @@ export const certifications = [
     issuer: "GP Academy",
     title: "Figma Design System",
     date: "Feb 2026",
-    url: "#", // ← update with certificate URL
+    url: "https://drive.google.com/file/d/1OrKIryrvR4mQ5k_hOeF5RVV0WikIAmMJ/view?usp=sharing", // ← update with certificate URL
   },
   {
     issuer: "Enhancing Digital Government and Economy (EDGE)",
     title: "Web Development Essentials",
     date: "May 2025",
-    url: "#",
+    url: "https://drive.google.com/file/d/1mtyzdx7uJoFN9xEUivurKfN2aT5yinUM/view?usp=sharing",
   },
   {
     issuer: "Google UX Design Certificate",
     title: "Fundamentals of User Experience Design",
     date: "July 2024",
-    url: "#",
+    url: "https://drive.google.com/file/d/1Zt3e0k8MKdWfF0EPFJ0v4_KcW4RN3KdM/view?usp=sharing",
   },
   {
     issuer: "Google UX Design Certificate",
     title: "Start the UX Design Process: Empathize, Define, and Ideate",
     date: "Aug 2024",
-    url: "#",
-  },
-  {
-    issuer: "Great Learning Academy",
-    title: "UI/UX for Beginners",
-    date: "Sep 2024",
-    url: "#",
+    url: "https://drive.google.com/file/d/1QXD7S4lOxiJqo5ERTr-Zi95mNpOXqgOo/view?usp=sharing",
   },
   {
     issuer: "Great Learning Academy",
     title: "Introduction to Web Designing",
     date: "Oct 2024",
-    url: "#",
+    url: "https://drive.google.com/file/d/1a6ESYNQxlS4CaR5Ff9lZf_WsK02ct69A/view?usp=sharing",
+  },
+  {
+    issuer: "Great Learning Academy",
+    title: "UI/UX for Beginners",
+    date: "Sep 2024",
+    url: "https://drive.google.com/file/d/1Oe0k3S14ixf1T41cTo5SonpQSNq4TEJj/view?usp=sharing",
   },
 ];
 
