@@ -1,6 +1,6 @@
-import SocialIcons from "@/components/ui/SocialIcons";
-import { siteConfig } from "@/data/portfolio";
 import { Download } from "lucide-react";
+import SocialIcons from "../../components/ui/SocialIcons";
+import { siteConfig } from "../../data/portfolio";
 
 // Profile photo — replace this URL with your own image in /public/images/
 // e.g. src="/images/profile.jpg"

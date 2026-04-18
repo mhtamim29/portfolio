@@ -1,7 +1,7 @@
-import SectionLabel from "@/components/ui/SectionLabel";
-import { certifications, education } from "@/data/portfolio";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
+import SectionLabel from "../../components/ui/SectionLabel";
+import { certifications, education } from "../../data/portfolio";
 
 const CERTIFICATE = "/certificate.png";
 

@@ -1,5 +1,5 @@
-import { siteConfig } from "@/data/portfolio";
 import Link from "next/link";
+import { siteConfig } from "../../data/portfolio";
 
 interface SocialIconsProps {
   variant?: "dark" | "light";

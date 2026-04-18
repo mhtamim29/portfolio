@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import { siteConfig } from '@/data/portfolio'
+import type { Metadata } from "next";
+import { siteConfig } from "./data/portfolio";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.title}`,
@@ -8,18 +8,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteConfig.name} — ${siteConfig.title}`,
     description: siteConfig.tagline,
-    type: 'website',
+    type: "website",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>{children}</body>
     </html>
-  )
+  );
 }

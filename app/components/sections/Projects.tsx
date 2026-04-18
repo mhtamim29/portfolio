@@ -1,8 +1,8 @@
-import LinkBadge from "@/components/ui/LinkBadge";
-import SectionLabel from "@/components/ui/SectionLabel";
-import { projects } from "@/data/portfolio";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import LinkBadge from "../../components/ui/LinkBadge";
+import SectionLabel from "../../components/ui/SectionLabel";
+import { projects } from "../../data/portfolio";
 
 export default function Projects() {
   return (

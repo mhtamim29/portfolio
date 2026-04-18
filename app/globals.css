@@ -1,15 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Space+Mono:wght@400;700&display=swap");
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-background: #f4f2ee;
+  --color-foreground: #0a0a0a;
+  --color-muted: #888580;
+  --color-border: #d8d5cf;
+
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-space-mono: "Space Mono", monospace;
+  --font-archivo: "Archivo Black", sans-serif;
+}
 
 /* ── Base ───────────────────────────────── */
 :root {
-  --color-bg: #f4f2ee;
-  --color-fg: #0a0a0a;
-  --color-muted: #888580;
-  --color-border: #d8d5cf;
+  --color-bg: var(--color-background);
+  --color-fg: var(--color-foreground);
+  --color-muted-var: var(--color-muted);
+  --color-border-var: var(--color-border);
 }
 
 html {
@@ -17,9 +25,9 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-fg);
-  font-family: 'DM Sans', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-dm-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,7 +37,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+  background: var(--color-background);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
@@ -107,7 +115,9 @@ body {
 .section-reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 .section-reveal.visible {
   opacity: 1;

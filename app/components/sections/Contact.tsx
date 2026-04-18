@@ -1,10 +1,10 @@
 "use client";
 
-import SectionLabel from "@/components/ui/SectionLabel";
-import { siteConfig } from "@/data/portfolio";
 import { SendHorizontal } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import SectionLabel from "../../components/ui/SectionLabel";
+import { siteConfig } from "../../data/portfolio";
 
 interface FormState {
   name: string;
