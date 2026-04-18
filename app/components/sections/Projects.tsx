@@ -27,20 +27,9 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.index}
-              className='
-    group flex gap-6 items-start px-4 py-8 border-t border-border rounded-sm
-    transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
-    hover:bg-foreground hover:border-foreground
-    max-[640px]:flex-col
-  '>
+              className='group flex gap-6 items-start px-4 py-8 border-t border-border rounded-sm transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-foreground hover:border-foreground max-[640px]:flex-col'>
               {/* Index */}
-              <span
-                className='
-      font-space-mono text-[14px] pt-1 shrink-0 w-5
-      text-muted
-      transition-colors duration-300 ease-in-out
-      group-hover:text-[#bfbfbf]
-    '>
+              <span className='font-space-mono text-[14px] pt-1 shrink-0 w-5 text-muted transition-colors duration-300 ease-in-out group-hover:text-[#bfbfbf]'>
                 {project.index}
               </span>
 
@@ -69,7 +58,7 @@ export default function Projects() {
                 </div>
 
                 {/* Description */}
-                <p className='font-dm-sans text-[14px] leading-[1.6] max-w-3xl text-muted transition-all duration-300 delay-100 ease-in-out group-hover:text-[#d8d5cf]'>
+                <p className='font-dm-sans text-[14px] leading-[1.6] text-muted transition-all duration-300 delay-100 ease-in-out group-hover:text-[#d8d5cf]'>
                   {project.description}
                 </p>
               </div>

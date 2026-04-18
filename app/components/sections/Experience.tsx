@@ -43,7 +43,7 @@ export default function Experience() {
                     </p>
                   </div>
                   {/* Description */}
-                  <p className='font-dm-sans text-[15px] leading-[1.75] text-foreground max-w-3xl'>
+                  <p className='font-dm-sans text-[15px] leading-[1.75] text-foreground'>
                     {item.description}
                   </p>
                 </div>
