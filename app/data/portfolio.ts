@@ -17,7 +17,8 @@ export const siteConfig = {
   // ── CV ──────────────────────────────────────────────────────
   // Place your CV file inside /public/cv/ and set the filename here.
   // Example: if your file is /public/cv/MHT-CV.pdf, set: '/cv/MHT-CV.pdf'
-  cvPath: "/cv/MHT-CV.pdf",
+  cvPath:
+    "https://drive.usercontent.google.com/u/0/uc?id=1dlS-YrYuHubFNqYBmKXortMVOQ0dI65p&export=download",
 
   // ── Social Links ─────────────────────────────────────────────
   socials: {
@@ -119,6 +120,42 @@ export const projects = [
     subtitle: "Property Inspection Platform",
     description:
       "Designed a structured inspection workflow platform enabling field teams to log, track, and report property conditions. Focused on reducing cognitive load across complex data-entry flows through clear information hierarchy and guided UI patterns.",
+    links: [
+      { type: "figma", label: "Figma", url: "https://figma.com/" },
+      { type: "live", label: "Live link", url: "#" },
+      { type: "caseStudy", label: "Case Study", url: "#" },
+    ],
+  },
+  {
+    index: "04",
+    title: "SUSTAINABLE ENERGY SOLUTIONS",
+    subtitle: "Renewable Energy Project Management",
+    description:
+      "Designed a project management tool for renewable energy initiatives, focusing on sustainability metrics and stakeholder collaboration. Created intuitive dashboards for tracking project progress, resource allocation, and environmental impact.",
+    links: [
+      { type: "figma", label: "Figma", url: "https://figma.com/" },
+      { type: "live", label: "Live link", url: "#" },
+      { type: "caseStudy", label: "Case Study", url: "#" },
+    ],
+  },
+  {
+    index: "05",
+    title: "GREEN TECH SOLUTIONS",
+    subtitle: "Sustainable Technology Platform",
+    description:
+      "Designed a platform for sustainable technology solutions, focusing on user engagement and environmental impact. Developed user-friendly interfaces for exploring eco-friendly products and services, with an emphasis on accessibility and visual appeal.",
+    links: [
+      { type: "figma", label: "Figma", url: "https://figma.com/" },
+      { type: "live", label: "Live link", url: "#" },
+      { type: "caseStudy", label: "Case Study", url: "#" },
+    ],
+  },
+  {
+    index: "06",
+    title: "ECO INNOVATIONS",
+    subtitle: "Environmental Technology Solutions",
+    description:
+      "Designed a platform for environmental technology solutions, focusing on user engagement and sustainability. Created intuitive interfaces for exploring eco-friendly products and services, with an emphasis on accessibility and visual appeal.",
     links: [
       { type: "figma", label: "Figma", url: "https://figma.com/" },
       { type: "live", label: "Live link", url: "#" },
