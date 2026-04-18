@@ -8,7 +8,7 @@
 export const siteConfig = {
   name: "Makibul Hossain Tamim",
   initials: "MHT",
-  title: "Junior UI/UX Designer",
+  title: "UI/UX Designer",
   tagline:
     "I craft precise, research-driven digital experiences — bridging the gap between user insight and pixel-perfect execution.",
   email: "mhtamimm29@gmail.com",
