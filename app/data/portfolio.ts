@@ -34,7 +34,7 @@ export const siteConfig = {
 export const stats = [
   { value: "20+", label: "Clients Served" },
   { value: "7+", label: "Projects Handled" },
-  { value: "1+", label: "Years Experience" },
+  { value: "2+", label: "Years Experience" },
 ];
 
 // ── Skills ───────────────────────────────────────────────────
@@ -96,9 +96,9 @@ export const projects = [
     description:
       "Designed a scalable multi-vendor platform covering three distinct user roles — buyer, seller, and service provider — each with a tailored flow. Delivered 30+ screens with a reusable component library, reducing design duplication across breakpoints.",
     links: [
-      { type: "figma", label: "Figma", url: "https://figma.com/" }, // ← update
-      { type: "live", label: "Live link", url: "https://example.com/" }, // ← update
-      { type: "caseStudy", label: "Case Study", url: "#" }, // ← update
+      { type: "figma", label: "Figma", url: "https://www.figma.com/design/B6NdR0OTPEfGQ1ssz8jauL/Cresify?node-id=0-1&t=iABe26PSSzjeCtTM-1" }, // ← update
+      { type: "live", label: "Live link", url: "https://cresify.com/" }, // ← update
+      { type: "caseStudy", label: "Case Study", url: "https://www.behance.net/gallery/244518373/Cresify-A-Multivendor-and-service-Provide-Platform#" }, // ← update
     ],
   },
   {
