@@ -93,13 +93,22 @@ export const projects = [
   {
     index: "01",
     title: "RENEWABLY UK",
-    subtitle: "Insurance & Compliance Dashboard",
+    subtitle:
+      "A comprehensive web platform redesign for UK renewable energy professionals, featuring IBG management, compliance dashboards, and government funding discovery",
     description:
-      "Designed a secure, compliance-focused dashboard for UK renewable energy contractors. Built end-to-end certificate generation flows with validation states, real-time status tracking, and WCAG AA contrast — appropriate for a high-stakes regulated environment.",
+      "Renewably UK is a full B2B web platform designed for UK-based renewable energy installation companies, retrofit assessors, and energy professionals. The project involved a complete redesign. The design covers the full user journey — from an onboarding signup flow with role-based selection (Installation Company, Retrofit Assessor, Retrofit Coordinator, Domestic Energy Assessor, Funding Partner, and more) to an authenticated installer portal with dashboards, document management, IBG certificate generation, and compliance tracking.",
     links: [
-      { type: "figma", label: "Figma", url: "https://figma.com/" },
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/JaANAtUXOpWb9Jxy4w98jl/GavinPrience784?node-id=1362-13854&t=zowsjA2mPRBa5MVI-1",
+      },
       { type: "live", label: "Live link", url: "https://renewably.energy/" },
-      { type: "caseStudy", label: "Case Study", url: "#" },
+      {
+        type: "caseStudy",
+        label: "Case Study",
+        url: "https://www.behance.net/gallery/241451871/Renewably-UK-Certificate-Management-Platform",
+      },
     ],
   },
   {
@@ -110,12 +119,15 @@ export const projects = [
     description:
       'Michaelfarrior is a comprehensive real estate platform designed for property buyers, sellers, and agents. The project covers three distinct user tiers — a public-facing free profile, a premium subscription experience, and a system admin panel — each with tailored UI flows. The design includes a public landing page with property discovery, blog, and "Why Choose Us" sections; a property listings page with advanced filters (price range, property type, location, bedrooms, bathrooms, square footage); authenticated user profiles with dashboard, saved properties, document management, and messaging; and a full admin panel for user, property, service, and blog management.',
     links: [
-      { type: "figma", label: "Figma", url: "https://figma.com/" },
-      { type: "live", label: "Live link", url: "https://renewably.energy/" },
-      { type: "caseStudy", label: "Case Study", url: "#" },
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/EpRw6KdFW1JepXWzjmsv6y/Michaelfarrior?node-id=40-2&t=qDIhvSlFW4bPHyQX-1",
+      },
+      { type: "live", label: "Live link", url: "https://farriorhomes.com/" },
+      // { type: "caseStudy", label: "Case Study", url: "#" },
     ],
   },
-
   {
     index: "03",
     title: "CRESIFY",
