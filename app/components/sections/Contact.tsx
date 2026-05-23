@@ -185,7 +185,7 @@ export default function Contact() {
               <button
                 onClick={handleSubmit}
                 disabled={status === "sending"}
-                className='self-start inline-flex items-center gap-3 border border-foreground text-foreground font-dm-sans font-medium text-[13px] uppercase tracking-wide px-4 py-2 rounded-full hover:bg-foreground hover:text-white transition-colors duration-200 disabled:opacity-50'>
+                className='self-start inline-flex items-center gap-3 border border-foreground text-foreground font-dm-sans font-medium text-[13px] uppercase tracking-wide px-4 py-2 rounded-full hover:bg-foreground hover:text-white transition-colors duration-200 disabled:opacity-50 cursor-pointer'>
                 {status === "sending"
                   ? "Sending..."
                   : status === "sent"
