@@ -141,7 +141,7 @@ export const projects = [
         label: "Figma",
         url: "https://www.figma.com/design/5b824JDzPaejU3Nmg9OlLl/Surf-Share?node-id=2-4&t=E8BkfRYrbJmWEGbB-1",
       },
-      // { type: "live", label: "Live link", url: "#" },
+      { type: "live", label: "Live link", url: "https://surfshare.com.au/" },
       // { type: "caseStudy", label: "Case Study", url: "#" },
     ],
   },
