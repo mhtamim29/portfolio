@@ -94,7 +94,7 @@ export default function SocialIcons({ variant = "dark" }: SocialIconsProps) {
   ];
 
   return (
-    <div className='flex items-center gap-3'>
+    <div className='flex flex-wrap items-center gap-3'>
       {links.map(({ href, icon, label }) => (
         <Link
           key={label}

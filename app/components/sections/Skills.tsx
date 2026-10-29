@@ -1,6 +1,7 @@
 import SectionLabel from "../ui/SectionLabel";
 import CapabilityIllustration from "./CapabilityIllustration";
 import { capabilities } from "../../data/portfolio";
+import styles from "./Capabilities.module.css";
 
 export default function Skills() {
   return (
@@ -28,7 +29,7 @@ export default function Skills() {
             <article
               key={area.id}
               aria-labelledby={`capability-${area.id}`}
-              className="relative flex min-w-0 flex-col md:row-span-5 md:grid md:grid-rows-subgrid"
+              className={`${styles.capability} relative flex min-w-0 flex-col md:row-span-5 md:grid md:grid-rows-subgrid`}
             >
               {index > 0 && (
                 <span
@@ -40,7 +41,9 @@ export default function Skills() {
                 <span>{area.label}</span>
                 <span aria-hidden="true">/{area.number}</span>
               </div>
-              <div className="h-[148px] w-full overflow-hidden rounded-sm bg-[#ebe9e3]">
+              <div
+                className={`${styles.stage} h-[148px] w-full overflow-hidden rounded-sm bg-[#ebe9e3]`}
+              >
                 <CapabilityIllustration discipline={area.id} />
               </div>
               <h3
