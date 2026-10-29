@@ -8,16 +8,20 @@ import Experience from "./components/sections/Experience";
 import Hero from "./components/sections/Hero";
 import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
+import Studio from "./components/sections/Studio";
+import Recommendations from "./components/sections/Recommendations";
 
 export default function Home() {
   return (
-    <main className='bg-background min-h-screen overflow-x-hidden'>
+    <main className="bg-background min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
-      <About />
-      <Skills />
       <Projects />
+      <About />
+      <Studio />
+      <Skills />
       <Experience />
+      <Recommendations />
       <Credentials />
       <CallToAction />
       <Contact />

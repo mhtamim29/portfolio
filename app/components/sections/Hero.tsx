@@ -1,62 +1,48 @@
-import { Download } from "lucide-react";
-import SocialIcons from "../../components/ui/SocialIcons";
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import SocialIcons from "../ui/SocialIcons";
 import { siteConfig } from "../../data/portfolio";
-
-// Profile photo — replace this URL with your own image in /public/images/
-// e.g. src="/images/profile.jpg"
-const PROFILE_IMAGE = "/makibul-hossain-tamim.png";
 
 export default function Hero() {
   return (
-    <section
-      id='home'
-      className='pt-[68px] border-b border-border' // 68px = navbar height
-    >
-      <div className='max-w-[1440px] mx-auto px-[120px] pt-[120px] pb-[160px] max-[1024px]:px-10 max-[640px]:px-6 max-[640px]:pt-16 max-[640px]:pb-20'>
-        {/* Main row */}
-        <div className='flex items-start justify-between gap-10 max-[900px]:flex-col'>
-          {/* Left — text block */}
-          <div className='flex flex-col gap-6 max-w-[555px] max-[900px]:max-w-full'>
-            {/* Name label */}
-            <p className='font-space-mono text-[11px] tracking-[0.88px] uppercase text-muted'>
-              {siteConfig.name}
-            </p>
-
-            {/* Big title */}
-            <div className='font-archivo leading-[1.1] text-foreground text-[96px] uppercase max-[1280px]:text-[72px] max-[1024px]:text-[56px] max-[640px]:text-[40px]'>
-              <p>JUNIOR</p>
-              <p>UI/UX</p>
-              <p>DESIGNER</p>
-            </div>
-
-            {/* Tagline */}
-            <p className='font-dm-sans text-[15px] leading-[1.75] text-muted max-w-[471px]'>
+    <section id="home" className="border-b border-border pt-[68px]">
+      <div className="section-shell pb-16 pt-20 md:pb-20 md:pt-24">
+        <div className="grid items-center gap-12 min-[1000px]:grid-cols-[1.5fr_1fr]">
+          <div className="min-w-0">
+            <p className="label mb-5">{siteConfig.name}</p>
+            <p className="mb-7 text-sm font-medium">{siteConfig.role}</p>
+            <h1 className="font-archivo text-[clamp(2.5rem,5.1vw,4.75rem)] leading-[1.12] tracking-[-0.035em] uppercase">
+              {siteConfig.headline}
+            </h1>
+            <p className="mt-7 max-w-xl text-base leading-relaxed text-muted">
               {siteConfig.tagline}
             </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#projects" className="button-primary">
+                View Selected Work{" "}
+                <ArrowDownRight size={17} aria-hidden="true" />
+              </a>
+              <a href="#contact" className="button-secondary">
+                Discuss a Project <ArrowUpRight size={17} aria-hidden="true" />
+              </a>
+            </div>
           </div>
-
-          {/* Right — profile photo */}
-          <div className='shrink-0 w-[427px] h-[427px] max-[1024px]:w-[320px] max-[1024px]:h-[320px] max-[640px]:w-full max-[640px]:h-[300px]'>
-            <img
-              src={PROFILE_IMAGE}
-              alt={siteConfig.name}
-              className='w-full h-full object-cover rounded-sm'
-            />
+          <div className="relative mx-auto w-full max-w-[400px]">
+            <div className="relative aspect-square overflow-hidden rounded-sm border border-border">
+              <Image
+                src="/makibul-hossain-tamim.png"
+                alt={siteConfig.name}
+                fill
+                sizes="(max-width: 640px) calc(100vw - 48px), 400px"
+                preload
+                className="object-cover"
+              />
+            </div>
+            <p className="label mt-4">{siteConfig.location}</p>
           </div>
         </div>
-
-        {/* Bottom row — socials + download cv */}
-        <div className='flex items-center justify-between mt-[120px] max-[640px]:flex-col max-[640px]:gap-6 max-[640px]:items-start max-[640px]:mt-12'>
-          <SocialIcons variant='dark' />
-
-          {/* Download CV — triggers actual file download */}
-          <a
-            href={siteConfig.cvPath}
-            download
-            className='inline-flex items-center gap-3 border border-foreground text-foreground font-dm-sans font-medium text-[13px] uppercase tracking-wide px-4 py-2 rounded-full hover:bg-foreground hover:text-white transition-colors duration-200'>
-            Download CV
-            <Download size={16} strokeWidth={1.5} />
-          </a>
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-6 border-t border-border pt-6">
+          <SocialIcons variant="dark" />
         </div>
       </div>
     </section>

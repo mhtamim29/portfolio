@@ -8,17 +8,14 @@
 export const siteConfig = {
   name: "Makibul Hossain Tamim",
   initials: "MHT",
-  title: "Junior UI/UX Designer",
+  title: "CEO & Co-Founder, Zentura",
+  role: "CEO & Co-Founder at Zentura",
+  headline: "Turning ideas into thoughtful digital products.",
+  location: "Dhaka, Bangladesh",
   tagline:
-    "I craft precise, research-driven digital experiences — bridging the gap between user insight and pixel-perfect execution.",
+    "I lead a product studio in Dhaka, helping founders and businesses move from early ideas to launch through product strategy, design, and engineering.",
   email: "mhtamimm29@gmail.com",
   phone: "+880 1777-914331",
-
-  // ── CV ──────────────────────────────────────────────────────
-  // Place your CV file inside /public/cv/ and set the filename here.
-  // Example: if your file is /public/cv/MHT-CV.pdf, set: '/cv/MHT-CV.pdf'
-  cvPath:
-    "https://drive.usercontent.google.com/u/0/uc?id=1dlS-YrYuHubFNqYBmKXortMVOQ0dI65p&export=download",
 
   // ── Social Links ─────────────────────────────────────────────
   socials: {
@@ -31,60 +28,72 @@ export const siteConfig = {
   },
 };
 
-// ── About Stats ─────────────────────────────────────────────
-export const stats = [
-  { value: "20+", label: "Clients Served" },
-  { value: "7+", label: "Projects Handled" },
-  { value: "1+", label: "Years Experience" },
+// ── About & studio ───────────────────────────────────────────
+export const about = [
+  "I’m the Co-Founder and CEO of Zentura, a product studio based in Dhaka, Bangladesh.",
+  "My background in Computer Science and Engineering and hands-on product design experience shape how I approach business problems, user needs, and technical decisions.",
+  "At Zentura, I lead studio direction, client partnerships, and product strategy. I work with clients and our team to clarify requirements, set priorities, and guide products from concept through release.",
+  "I value clear communication, shared ownership, and continuous improvement through testing and feedback.",
 ];
 
-// ── Skills ───────────────────────────────────────────────────
-export const skills = [
-  {
-    title: "UX Research & Design",
-    tags: [
-      "User Interviews",
-      "Usability Testing",
-      "Persona Development",
-      "User Journey Mapping",
-      "Information Architecture",
-      "Wireframing",
-    ],
-  },
-  {
-    title: "UI & Prototyping",
-    tags: [
-      "Figma",
-      "Interactive Prototyping",
-      "Design Systems",
-      "Component Libraries",
-      "Responsive Design",
-      "Developer Handoff",
-    ],
-  },
-  {
-    title: "Interaction & Visual Design",
-    tags: [
-      "Typography",
-      "Color Theory",
-      "Layout Principles",
-      "WCAG Accessibility",
-      "Version Control (Figma Libraries)",
-      "Cross-functional Collaboration",
-    ],
-  },
-  {
-    title: "Development",
-    tags: [
-      "HTML/CSS",
-      "JavaScript",
-      "React",
-      "Tailwind CSS",
-      "Git",
-      "Responsive Design",
-    ],
-  },
+export const highlights = [
+  { value: "Zentura", label: "Co-Founder & CEO" },
+  { value: "Strategy → Release", label: "Product approach" },
+  { value: "Dhaka", label: "Based in Bangladesh" },
 ];
+
+export const studio = {
+  name: "Zentura",
+  description:
+    "A product studio bringing strategy, design, and engineering into one continuous process. We help founders and businesses define the right problem and turn ideas into digital products.",
+  responsibility:
+    "I lead studio direction, client partnerships, and product strategy, working closely with our team from discovery through release.",
+  url: "https://www.zentura.agency/",
+};
+
+// ── Capabilities ─────────────────────────────────────────────
+export const capabilities = {
+  heading: "Three disciplines. One product mindset.",
+  description:
+    "I bring business leadership, engineering, and design together to take products from a clear idea to a considered release.",
+  areas: [
+    {
+      id: "leadership",
+      number: "01",
+      label: "Set the direction",
+      title: "CEO & Studio Leadership",
+      description:
+        "Setting direction, building partnerships, and guiding teams from ambition to delivery.",
+      focus: [
+        "Business & product strategy",
+        "Client partnerships",
+        "Team leadership",
+      ],
+    },
+    {
+      id: "engineering",
+      number: "02",
+      label: "Build the foundation",
+      title: "Software Engineering",
+      description:
+        "Turning product requirements into well-structured, connected web applications.",
+      focus: [
+        "Technical planning",
+        "Application development",
+        "System integration",
+      ],
+    },
+    {
+      id: "design",
+      number: "03",
+      label: "Shape the experience",
+      title: "Product Design",
+      description:
+        "Making complex products clear, usable, and consistent from discovery to release.",
+      focus: ["Product discovery", "UX architecture", "Design systems"],
+    },
+  ],
+} as const;
 
 // ── Projects ─────────────────────────────────────────────────
 // Add as many link types as you need per project.
@@ -93,8 +102,16 @@ export const projects = [
   {
     index: "01",
     title: "RENEWABLY UK",
+    slug: "renewably-uk",
+    category: "Compliance platform",
+    role: "UI/UX design",
+    contributionNote:
+      "My contribution focused on UI/UX research and design. The wider platform delivery brought together Zentura’s design and engineering team.",
+    featured: true,
+    image: "/projects/renewably-uk.png",
+    imageAlt: "Renewably UK compliance dashboard case study cover",
     subtitle:
-      "A comprehensive web platform redesign for UK renewable energy professionals, featuring IBG management, compliance dashboards, and government funding discovery",
+      "Research, user flows, interface design, and design system for renewable energy compliance.",
     description:
       "Renewably UK is a full B2B web platform designed for UK-based renewable energy installation companies, retrofit assessors, and energy professionals. The project involved a complete redesign. The design covers the full user journey — from an onboarding signup flow with role-based selection (Installation Company, Retrofit Assessor, Retrofit Coordinator, Domestic Energy Assessor, Funding Partner, and more) to an authenticated installer portal with dashboards, document management, IBG certificate generation, and compliance tracking.",
     links: [
@@ -113,45 +130,38 @@ export const projects = [
   },
   {
     index: "02",
-    title: "FARRIOR HOMES",
+    title: "MEM",
+    slug: "mem",
+    category: "Product discovery",
+    role: "Collaborative UX architecture",
+    featured: true,
+    image: "/projects/mem.png",
+    imageAlt: "MEM contractor operating system discovery case study cover",
     subtitle:
-      "A full-featured real estate marketplace with public listings, premium profiles, and a system admin panel",
+      "Product discovery and UX architecture for a client-first contractor operating system.",
     description:
-      'Michaelfarrior is a comprehensive real estate platform designed for property buyers, sellers, and agents. The project covers three distinct user tiers — a public-facing free profile, a premium subscription experience, and a system admin panel — each with tailored UI flows. The design includes a public landing page with property discovery, blog, and "Why Choose Us" sections; a property listings page with advanced filters (price range, property type, location, bedrooms, bathrooms, square footage); authenticated user profiles with dashboard, saved properties, document management, and messaging; and a full admin panel for user, property, service, and blog management.',
+      "A collaborative discovery and UX architecture case study exploring workflow design, system logic, changing requirements, and early product decisions for a complex contractor SaaS platform. This work focuses on discovery and architecture rather than a shipped product.",
     links: [
       {
-        type: "figma",
-        label: "Figma",
-        url: "https://www.figma.com/design/EpRw6KdFW1JepXWzjmsv6y/Michaelfarrior?node-id=40-2&t=qDIhvSlFW4bPHyQX-1",
+        type: "caseStudy",
+        label: "Case Study",
+        url: "https://www.behance.net/gallery/242534927/MEM-A-Client-First-Contractor-Operating-System",
       },
-      { type: "live", label: "Live link", url: "https://farriorhomes.com/" },
-      // { type: "caseStudy", label: "Case Study", url: "#" },
     ],
   },
   {
     index: "03",
-    title: "SURF SHARE",
-    subtitle:
-      "A surf photography marketplace connecting wave riders and photographers across global surf destinations",
-    description:
-      "SurfShare is a multi-role surf photography platform designed for surfers, photographers (contributors), moderators, and admins. The project spans five distinct user experiences — a public-facing website landing page, contributor flows, a logged-in user portal, a moderator dashboard, and a full admin panel. The design includes a public landing page with featured destinations, a gallery with advanced filtering, an interactive surf spot map, and a contributor section; authenticated user flows covering favorites, downloads, and purchase/cart functionality; a contributor signup and photo submission workflow; a moderator panel for content review and approval; and a system admin panel for platform management — all unified under a coastal, photography-driven visual identity.",
-    links: [
-      {
-        type: "figma",
-        label: "Figma",
-        url: "https://www.figma.com/design/5b824JDzPaejU3Nmg9OlLl/Surf-Share?node-id=2-4&t=E8BkfRYrbJmWEGbB-1",
-      },
-      { type: "live", label: "Live link", url: "https://surfshare.com.au/" },
-      // { type: "caseStudy", label: "Case Study", url: "#" },
-    ],
-  },
-  {
-    index: "04",
     title: "CRESIFY",
+    slug: "cresify",
+    category: "E-commerce & services",
+    role: "UI/UX design",
+    featured: true,
+    image: "/projects/cresify.png",
+    imageAlt: "Cresify project cover from the original Behance case study",
     subtitle:
-      "A multi-vendor e-commerce and service provider platform with buyer, seller, service provider and admin experiences across web and mobile",
+      "A multivendor marketplace connecting buyers, sellers, and service providers.",
     description:
-      "Cresify is a comprehensive multi-vendor e-commerce and service provider platform designed to support three core user roles — buyers, sellers, service provider and platform administrators. The design covers a public-facing storefront with product discovery, category browsing, and advanced filtering; a seller dashboard for inventory management, order tracking, and analytics; and a full admin panel for vendor approvals, dispute resolution, and platform oversight. The project emphasizes a clean, conversion-focused UI with consistent design tokens, responsive layouts, and streamlined checkout and onboarding flows.",
+      "Cresify is a comprehensive multi-vendor e-commerce and service provider platform designed to support four core user roles — buyers, sellers, service providers, and platform administrators. The design covers a public-facing storefront with product discovery, category browsing, and advanced filtering; a seller dashboard for inventory management, order tracking, and analytics; and a full admin panel for vendor approvals, dispute resolution, and platform oversight. The project emphasizes a clean, conversion-focused UI with consistent design tokens, responsive layouts, and streamlined checkout and onboarding flows.",
     links: [
       {
         type: "figma",
@@ -167,27 +177,16 @@ export const projects = [
     ],
   },
   {
-    index: "05",
-    title: "ART NEIDICH",
+    index: "04",
+    title: "SPORTPICKS",
+    slug: "sportpicks",
+    category: "Sports analytics",
+    role: "UI/UX design",
+    featured: true,
+    image: "/projects/sportpicks.png",
+    imageAlt: "SportPicks sports analytics interface case study cover",
     subtitle:
-      "A dual-role mobile inspection platform for admins and field inspectors, with job management, reporting, and real-time notifications",
-    description:
-      "Art Neidich is a property inspection mobile application designed for two distinct user roles — admins and field inspectors. The admin side covers a comprehensive dashboard with job summaries (total, pending, overdue, and completed today), a full job management system with job creation, filtering, and status tracking, label management, and a notification center. The inspector side features a streamlined workflow for conducting property inspections, annotating findings, capturing and attaching photos, adding location data, and submitting verification reports. The app also includes profile and settings management, an alert and review system, and a clean navigation structure optimized for on-the-go field use.",
-    links: [
-      {
-        type: "figma",
-        label: "Figma",
-        url: "https://www.figma.com/design/1fkJtBz7Knqd1YOcOQHXwY/artneidich?node-id=5-128&t=iji7SkVizJ86t5DQ-1",
-      },
-      // { type: "live", label: "Live link", url: "#" },
-      // { type: "caseStudy", label: "Case Study", url: "#" },
-    ],
-  },
-  {
-    index: "06",
-    title: "SPORT PICKS",
-    subtitle:
-      "A modern sports analytics platform delivering data-driven insights, predictions, and performance tracking for smarter decision-making",
+      "A sports analytics experience focused on data clarity, trust, and visual hierarchy.",
     description:
       "SportPicks is a sleek and intuitive sports analytics platform designed to help users make informed decisions through real-time data, predictive insights, and performance metrics. The project focuses on delivering a clean, engaging user experience while handling complex sports data in an accessible way. It features a dynamic dashboard with match insights, statistical breakdowns, and trend analysis; prediction modules powered by historical data; and user-focused interfaces for tracking performance, favorite teams, and betting insights. The design emphasizes clarity, speed, and usability, combining modern UI aesthetics with functional depth to support both casual fans and serious analysts.",
     links: [
@@ -204,14 +203,85 @@ export const projects = [
       },
     ],
   },
+  {
+    index: "05",
+    title: "FARRIOR HOMES",
+    slug: "farrior-homes",
+    category: "Real estate",
+    role: "UI/UX design",
+    featured: false,
+    subtitle:
+      "A full-featured real estate marketplace with public listings, premium profiles, and a system admin panel",
+    description:
+      'Michaelfarrior is a comprehensive real estate platform designed for property buyers, sellers, and agents. The project covers three distinct user tiers — a public-facing free profile, a premium subscription experience, and a system admin panel — each with tailored UI flows. The design includes a public landing page with property discovery, blog, and "Why Choose Us" sections; a property listings page with advanced filters (price range, property type, location, bedrooms, bathrooms, square footage); authenticated user profiles with dashboard, saved properties, document management, and messaging; and a full admin panel for user, property, service, and blog management.',
+    links: [
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/EpRw6KdFW1JepXWzjmsv6y/Michaelfarrior?node-id=40-2&t=qDIhvSlFW4bPHyQX-1",
+      },
+      { type: "live", label: "Live link", url: "https://farriorhomes.com/" },
+      // { type: "caseStudy", label: "Case Study", url: "#" },
+    ],
+  },
+  {
+    index: "06",
+    title: "SURF SHARE",
+    slug: "surf-share",
+    category: "Photography marketplace",
+    role: "UI/UX design",
+    featured: false,
+    subtitle:
+      "A surf photography marketplace connecting wave riders and photographers across global surf destinations",
+    description:
+      "SurfShare is a multi-role surf photography platform designed for surfers, photographers (contributors), moderators, and admins. The project spans five distinct user experiences — a public-facing website landing page, contributor flows, a logged-in user portal, a moderator dashboard, and a full admin panel. The design includes a public landing page with featured destinations, a gallery with advanced filtering, an interactive surf spot map, and a contributor section; authenticated user flows covering favorites, downloads, and purchase/cart functionality; a contributor signup and photo submission workflow; a moderator panel for content review and approval; and a system admin panel for platform management — all unified under a coastal, photography-driven visual identity.",
+    links: [
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/5b824JDzPaejU3Nmg9OlLl/Surf-Share?node-id=2-4&t=E8BkfRYrbJmWEGbB-1",
+      },
+      { type: "live", label: "Live link", url: "https://surfshare.com.au/" },
+      // { type: "caseStudy", label: "Case Study", url: "#" },
+    ],
+  },
+  {
+    index: "07",
+    title: "ART NEIDICH",
+    slug: "art-neidich",
+    category: "Mobile inspection",
+    role: "UI design",
+    featured: false,
+    subtitle:
+      "A dual-role mobile inspection platform for admins and field inspectors, with job management, reporting, and real-time notifications",
+    description:
+      "Art Neidich is a property inspection mobile application designed for two distinct user roles — admins and field inspectors. The admin side covers a comprehensive dashboard with job summaries (total, pending, overdue, and completed today), a full job management system with job creation, filtering, and status tracking, label management, and a notification center. The inspector side features a streamlined workflow for conducting property inspections, annotating findings, capturing and attaching photos, adding location data, and submitting verification reports. The app also includes profile and settings management, an alert and review system, and a clean navigation structure optimized for on-the-go field use.",
+    links: [
+      {
+        type: "figma",
+        label: "Figma",
+        url: "https://www.figma.com/design/1fkJtBz7Knqd1YOcOQHXwY/artneidich?node-id=5-128&t=iji7SkVizJ86t5DQ-1",
+      },
+      // { type: "live", label: "Live link", url: "#" },
+      // { type: "caseStudy", label: "Case Study", url: "#" },
+    ],
+  },
 ];
 
 // ── Experience ───────────────────────────────────────────────
 export const experience = [
   {
+    company: "ZENTURA AGENCY",
+    role: "CEO & Co-Founder",
+    period: "May 2026 – Present",
+    location: "Dhaka, Bangladesh · Remote",
+    description:
+      "Lead studio direction, client partnerships, and product strategy. Work with clients and a cross-functional team to understand problems, clarify requirements, define priorities, and guide digital products from concept through release.",
+  },
+  {
     company: "FB INTERNATIONAL BD",
     role: "Junior UI/UX Designer",
-    period: "Oct 2025 – Present",
+    period: "Oct 2025 – Apr 2026",
     location: "Dhaka, Bangladesh",
     description:
       "Led end-to-end UI/UX design for 5 projects, from initial research and wireframing to high-fidelity design and deployment. Collaborated closely with developers to ensure seamless implementation, focusing on usability, consistency, and delivering user-centered solutions.",
@@ -231,6 +301,25 @@ export const experience = [
     location: "Dhaka (Remote)",
     description:
       "Designed a mobile application interface from concept to high-fidelity, focusing on usability, visual consistency, and responsive design. Worked closely with developers to ensure seamless and pixel-accurate implementation.",
+  },
+];
+
+// ── Recommendations ─────────────────────────────────────────
+// Excerpts from recommendations on LinkedIn, February 2026.
+export const recommendations = [
+  {
+    name: "Joy Sarkar",
+    context: "Client at the time · February 2026",
+    quote:
+      "Tamim has a strong understanding of user flows, interaction design, and visual hierarchy. He collaborates effectively with cross-functional teams, welcomes feedback, and iterates quickly to ensure designs are both practical and impactful.",
+    url: "https://www.linkedin.com/in/mhtamimm/#recommendations",
+  },
+  {
+    name: "Rabab Khan Rongon",
+    context: "Direct manager at Vector Checkmate · February 2026",
+    quote:
+      "What impressed me most was his willingness to understand product context rather than just complete assigned tasks.",
+    url: "https://www.linkedin.com/in/mhtamimm/#recommendations",
   },
 ];
 
@@ -257,36 +346,42 @@ export const certifications = [
     issuer: "GP Academy",
     title: "Figma Design System",
     date: "Feb 2026",
+    issuedAt: "2026-02",
     url: "https://drive.google.com/file/d/1OrKIryrvR4mQ5k_hOeF5RVV0WikIAmMJ/view?usp=sharing", // ← update with certificate URL
   },
   {
     issuer: "Enhancing Digital Government and Economy (EDGE)",
     title: "Web Development Essentials",
     date: "May 2025",
+    issuedAt: "2025-05",
     url: "https://drive.google.com/file/d/1mtyzdx7uJoFN9xEUivurKfN2aT5yinUM/view?usp=sharing",
   },
   {
     issuer: "Google UX Design Certificate",
     title: "Fundamentals of User Experience Design",
     date: "July 2024",
+    issuedAt: "2024-07",
     url: "https://drive.google.com/file/d/1Zt3e0k8MKdWfF0EPFJ0v4_KcW4RN3KdM/view?usp=sharing",
   },
   {
     issuer: "Google UX Design Certificate",
     title: "Start the UX Design Process: Empathize, Define, and Ideate",
     date: "Aug 2024",
+    issuedAt: "2024-08",
     url: "https://drive.google.com/file/d/1QXD7S4lOxiJqo5ERTr-Zi95mNpOXqgOo/view?usp=sharing",
   },
   {
     issuer: "Great Learning Academy",
     title: "Introduction to Web Designing",
     date: "Oct 2024",
+    issuedAt: "2024-10",
     url: "https://drive.google.com/file/d/1a6ESYNQxlS4CaR5Ff9lZf_WsK02ct69A/view?usp=sharing",
   },
   {
     issuer: "Great Learning Academy",
     title: "UI/UX for Beginners",
     date: "Sep 2024",
+    issuedAt: "2024-09",
     url: "https://drive.google.com/file/d/1Oe0k3S14ixf1T41cTo5SonpQSNq4TEJj/view?usp=sharing",
   },
 ];

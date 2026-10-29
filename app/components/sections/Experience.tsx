@@ -1,56 +1,44 @@
-import SectionLabel from "../../components/ui/SectionLabel";
+import SectionLabel from "../ui/SectionLabel";
 import { experience } from "../../data/portfolio";
 
 export default function Experience() {
   return (
-    <section id='experience' className='border-b border-border'>
-      <div className='max-w-[1440px] mx-auto px-[120px] py-[120px] max-[1024px]:px-10 max-[640px]:px-6 max-[640px]:py-16'>
-        <div className='flex flex-col gap-12'>
-          <SectionLabel>EXPERIENCE</SectionLabel>
-
-          {/* Timeline */}
-          <div className='flex gap-6'>
-            {/* Vertical line + dots */}
-            <div className='relative flex flex-col items-center pt-2 max-[640px]:hidden'>
-              <div className='w-px bg-border flex-1' />
-              {/* Overlay dots */}
-              <div className='absolute top-0 left-1/2 -translate-x-1/2 flex flex-col'>
-                {experience.map((_, i) => (
-                  <div
-                    key={i}
-                    className='w-[11px] h-[10px] rounded-full bg-foreground -ml-[5px]'
-                    style={{
-                      // Approximate spacing between items
-                      marginTop: i === 0 ? "0px" : `${198 + (i - 1) * 8}px`,
-                    }}
-                  />
-                ))}
+    <section id="experience" className="border-b border-border">
+      <div className="section-shell section-space">
+        <SectionLabel>EXPERIENCE</SectionLabel>
+        <h2 className="font-archivo mt-4 mb-10 text-3xl uppercase md:text-4xl">
+          Design foundations. Product leadership.
+        </h2>
+        <ol className="ml-2 border-l border-border">
+          {experience.map((item, index) => (
+            <li
+              key={item.company}
+              className="relative pb-10 pl-7 last:pb-0 md:pl-10"
+            >
+              <span
+                aria-hidden="true"
+                className={`absolute top-2 -left-[5px] h-[9px] w-[9px] rounded-full ${index === 0 ? "bg-foreground" : "bg-border"}`}
+              />
+              <div className="flex flex-wrap items-center gap-3">
+                <h3 className="font-archivo text-xl uppercase">
+                  {item.company}
+                </h3>
+                {index === 0 && (
+                  <span className="rounded-full border border-border px-3 py-1 text-[10px] uppercase tracking-wide">
+                    Current
+                  </span>
+                )}
               </div>
-            </div>
-
-            {/* Experience items */}
-            <div className='flex flex-col gap-16 flex-1'>
-              {experience.map((item, i) => (
-                <div key={i} className='flex flex-col gap-4'>
-                  {/* Company + role */}
-                  <div className='flex flex-col gap-2'>
-                    <h3 className='font-archivo text-[20px] leading-[1.5] uppercase text-foreground'>
-                      {item.company}
-                    </h3>
-                    <p className='font-space-mono text-[12px] tracking-[0.96px] uppercase text-muted'>
-                      {item.role} &nbsp;·&nbsp; {item.period} &nbsp;·&nbsp;{" "}
-                      {item.location}
-                    </p>
-                  </div>
-                  {/* Description */}
-                  <p className='font-dm-sans text-[15px] leading-[1.75] text-foreground'>
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+              <p className="mt-2 text-sm font-medium">{item.role}</p>
+              <p className="label mt-2 leading-relaxed">
+                {item.period} · {item.location}
+              </p>
+              <p className="mt-4 max-w-3xl text-sm leading-[1.8] text-muted">
+                {item.description}
+              </p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

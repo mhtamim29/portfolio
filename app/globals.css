@@ -4,7 +4,7 @@
 @theme {
   --color-background: #f4f2ee;
   --color-foreground: #0a0a0a;
-  --color-muted: #888580;
+  --color-muted: #68645f;
   --color-border: #d8d5cf;
 
   --font-dm-sans: "DM Sans", sans-serif;
@@ -22,6 +22,28 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+section[id] {
+  scroll-margin-top: 20px;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
@@ -49,6 +71,21 @@ body {
 
 /* ── Utility classes ─────────────────────── */
 @layer utilities {
+  .section-shell {
+    @apply max-w-[1440px] mx-auto px-6 min-[641px]:px-10 min-[1025px]:px-[120px];
+  }
+
+  .section-space {
+    @apply py-16 md:py-24;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-foreground bg-foreground px-5 py-3 text-xs font-medium uppercase tracking-wide text-background transition-opacity hover:opacity-75;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-border px-5 py-3 text-xs font-medium uppercase tracking-wide transition-colors hover:bg-foreground hover:text-background;
+  }
   .label {
     @apply font-space-mono text-[11px] tracking-[0.88px] uppercase text-muted;
   }

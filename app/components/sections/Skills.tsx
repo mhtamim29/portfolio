@@ -1,68 +1,76 @@
-"use client";
-
-import { useState } from "react";
-import SectionLabel from "../../components/ui/SectionLabel";
-import { skills } from "../../data/portfolio";
+import SectionLabel from "../ui/SectionLabel";
+import CapabilityIllustration from "./CapabilityIllustration";
+import { capabilities } from "../../data/portfolio";
 
 export default function Skills() {
-  const [openIndex, setOpenIndex] = useState<number>(0);
-
   return (
-    <section id='skills' className='border-b border-border'>
-      <div className='max-w-[1440px] mx-auto px-[120px] py-[120px] max-[1024px]:px-10 max-[640px]:px-6 max-[640px]:py-16'>
-        <div className='flex flex-col gap-12'>
-          {/* Header */}
-          <div className='flex flex-col gap-4'>
-            <SectionLabel>SKILLS</SectionLabel>
-            <h2 className='font-archivo text-[40px] leading-[1.25] uppercase text-foreground max-[640px]:text-[28px]'>
-              TURNING IDEAS INTO PRECISE DIGITAL EXPERIENCES
-            </h2>
-          </div>
+    <section
+      id="skills"
+      aria-labelledby="capabilities-heading"
+      className="border-b border-border"
+    >
+      <div className="section-shell py-16 md:py-20">
+        <SectionLabel>CAPABILITIES</SectionLabel>
+        <div className="mt-4 grid items-end gap-5 md:grid-cols-[1.35fr_1fr] md:gap-14">
+          <h2
+            id="capabilities-heading"
+            className="font-archivo max-w-[560px] text-[30px] leading-[1.2] tracking-[-0.025em] uppercase md:text-[40px]"
+          >
+            {capabilities.heading}
+          </h2>
+          <p className="max-w-[400px] text-[15px] leading-[1.8] text-muted">
+            {capabilities.description}
+          </p>
+        </div>
 
-          {/* Accordion */}
-          <div className='flex flex-col'>
-            {skills.map((skill, i) => {
-              const isOpen = openIndex === i;
-              return (
-                <div key={skill.title} className='border-t border-border'>
-                  <button
-                    className='w-full flex items-center justify-between py-4 group'
-                    onClick={() => setOpenIndex(isOpen ? -1 : i)}
-                    aria-expanded={isOpen}>
-                    <span className='font-archivo text-[24px] leading-[1.5] uppercase text-foreground max-[640px]:text-[18px]'>
-                      {skill.title}
-                    </span>
-
-                    {/* Toggle circle */}
+        <div className="mt-9 grid gap-10 md:grid-cols-3 md:gap-x-10 md:gap-y-0">
+          {capabilities.areas.map((area, index) => (
+            <article
+              key={area.id}
+              aria-labelledby={`capability-${area.id}`}
+              className="relative flex min-w-0 flex-col md:row-span-5 md:grid md:grid-rows-subgrid"
+            >
+              {index > 0 && (
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-y-0 -left-5 hidden w-px bg-border md:block"
+                />
+              )}
+              <div className="mb-3 flex items-center justify-between gap-3 font-space-mono text-[10px] uppercase tracking-[0.08em] text-muted">
+                <span>{area.label}</span>
+                <span aria-hidden="true">/{area.number}</span>
+              </div>
+              <div className="h-[148px] w-full overflow-hidden rounded-sm bg-[#ebe9e3]">
+                <CapabilityIllustration discipline={area.id} />
+              </div>
+              <h3
+                id={`capability-${area.id}`}
+                className="font-archivo mt-5 text-[22px] leading-[1.3] uppercase"
+              >
+                {area.title}
+              </h3>
+              <p className="mt-3 text-[14px] leading-[1.7] text-muted">
+                {area.description}
+              </p>
+              <ul
+                aria-label={`${area.title} focus areas`}
+                className="mt-5 flex flex-wrap content-start gap-x-4 gap-y-2 border-t border-border pt-4"
+              >
+                {area.focus.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-2 text-[11px] leading-relaxed"
+                  >
                     <span
-                      className={`w-6 h-6 rounded-full border border-foreground flex items-center justify-center transition-colors duration-200 ${
-                        isOpen ? "bg-foreground" : "bg-transparent"
-                      }`}>
-                      {isOpen && (
-                        <span className='w-2 h-2 bg-white rounded-full' />
-                      )}
-                    </span>
-                  </button>
-
-                  {/* Expanded tags */}
-                  {isOpen && (
-                    <div className='flex flex-wrap gap-2 pb-5'>
-                      {skill.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className='font-dm-sans text-[15px] text-muted'>
-                          {tag}
-                          {skill.tags.indexOf(tag) < skill.tags.length - 1
-                            ? " ·"
-                            : ""}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+                      aria-hidden="true"
+                      className="h-[4px] w-[4px] shrink-0 rounded-full bg-[#7a846c]"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </div>
     </section>
