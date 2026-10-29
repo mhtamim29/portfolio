@@ -6,7 +6,7 @@ export default function Studio() {
   return (
     <section
       id="studio"
-      className="border-b border-border bg-foreground text-background"
+      className="surface-dark border-b border-border bg-foreground text-background"
     >
       <div className="section-shell section-space">
         <SectionLabel>THE STUDIO</SectionLabel>
