@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     description: siteConfig.tagline,
     type: "website",
   },
+  twitter: {
+    card: "summary",
+    title: `${siteConfig.name} — ${siteConfig.title}`,
+    description: siteConfig.tagline,
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

@@ -6,8 +6,9 @@ import { siteConfig } from "../../data/portfolio";
 
 const navLinks = [
   { label: "HOME", href: "#home" },
-  { label: "ABOUT", href: "#about" },
   { label: "WORKS", href: "#projects" },
+  { label: "ABOUT", href: "#about" },
+  { label: "ZENTURA", href: "#studio" },
   { label: "CONTACT", href: "#contact" },
 ];
 
@@ -21,7 +22,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleHireMe = () => {
+  const handleDiscussProject = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
@@ -32,39 +33,46 @@ export default function Navbar() {
         scrolled
           ? "bg-background/95 backdrop-blur-sm shadow-sm"
           : "bg-background"
-      } border-b border-border`}>
-      <nav className='max-w-[1440px] mx-auto px-[120px] h-[68px] flex items-center justify-between max-[1024px]:px-10 max-[640px]:px-6'>
+      } border-b border-border`}
+    >
+      <nav className="max-w-[1440px] mx-auto px-[120px] h-[68px] flex items-center justify-between max-[1024px]:px-10 max-[640px]:px-6">
         {/* Logo */}
         <Link
-          href='#home'
-          className='font-archivo text-[16px] tracking-[-0.4px] uppercase text-foreground hover:opacity-70 transition-opacity'>
+          href="#home"
+          className="font-archivo text-[16px] tracking-[-0.4px] uppercase text-foreground hover:opacity-70 transition-opacity"
+        >
           {siteConfig.initials}
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className='hidden md:flex items-center gap-8'>
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className='font-space-mono text-[11px] tracking-[0.88px] uppercase text-muted hover:text-foreground transition-colors duration-200'>
+              className="font-space-mono text-[11px] tracking-[0.88px] uppercase text-muted hover:text-foreground transition-colors duration-200"
+            >
               {link.label}
             </a>
           ))}
         </div>
 
-        {/* Hire Me Button */}
+        {/* Project inquiry */}
         <button
-          onClick={handleHireMe}
-          className='hidden md:block bg-foreground text-white font-dm-sans font-medium text-[13px] uppercase tracking-wide px-5 py-2 rounded-full hover:bg-foreground/80 transition-colors duration-200 cursor-pointer'>
-          HIRE ME
+          onClick={handleDiscussProject}
+          className="hidden md:block bg-foreground text-white font-dm-sans font-medium text-[13px] uppercase tracking-wide px-5 py-2 rounded-full hover:bg-foreground/80 transition-colors duration-200 cursor-pointer"
+        >
+          DISCUSS A PROJECT
         </button>
 
         {/* Mobile Hamburger */}
         <button
-          className='md:hidden flex flex-col gap-1.5 p-2'
+          className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label='Toggle menu'>
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
+        >
           <span
             className={`block h-px w-5 bg-foreground transition-transform duration-300 ${
               menuOpen ? "rotate-45 translate-y-2" : ""
@@ -85,20 +93,25 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className='md:hidden bg-background border-t border-border px-6 py-6 flex flex-col gap-4'>
+        <div
+          id="mobile-navigation"
+          className="md:hidden bg-background border-t border-border px-6 py-6 flex flex-col gap-4"
+        >
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className='font-space-mono text-[11px] tracking-[0.88px] uppercase text-muted hover:text-foreground transition-colors'>
+              className="font-space-mono text-[11px] tracking-[0.88px] uppercase text-muted hover:text-foreground transition-colors"
+            >
               {link.label}
             </a>
           ))}
           <button
-            onClick={handleHireMe}
-            className='mt-2 self-start bg-foreground text-white font-dm-sans font-medium text-[13px] uppercase tracking-wide px-5 py-2 rounded-full'>
-            HIRE ME
+            onClick={handleDiscussProject}
+            className="mt-2 self-start bg-foreground text-white font-dm-sans font-medium text-[13px] uppercase tracking-wide px-5 py-2 rounded-full"
+          >
+            DISCUSS A PROJECT
           </button>
         </div>
       )}

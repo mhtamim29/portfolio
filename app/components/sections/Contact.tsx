@@ -94,67 +94,83 @@ export default function Contact() {
     "w-full bg-transparent border-b border-border py-2 font-dm-sans text-[15px] text-foreground placeholder:text-muted/50 focus:outline-none focus:border-foreground transition-colors duration-200";
 
   return (
-    <section id='contact' className='border-b border-border'>
-      <div className='max-w-[1440px] mx-auto px-[120px] py-[120px] max-[1024px]:px-10 max-[640px]:px-6 max-[640px]:py-16'>
-        <div className='flex flex-col gap-12'>
+    <section id="contact" className="border-b border-border">
+      <div className="max-w-[1440px] mx-auto px-[120px] py-[120px] max-[1024px]:px-10 max-[640px]:px-6 max-[640px]:py-16">
+        <div className="flex flex-col gap-12">
           {/* Header */}
-          <div className='flex flex-col gap-4'>
+          <div className="flex flex-col gap-4">
             <SectionLabel>GET IN TOUCH</SectionLabel>
-            <h2 className='font-archivo text-[48px] leading-[1.25] uppercase text-foreground max-[640px]:text-[32px]'>
-              Let&apos;s Create Together
+            <h2 className="font-archivo text-[48px] leading-[1.25] uppercase text-foreground max-[640px]:text-[32px]">
+              Let&apos;s Discuss Your Product
             </h2>
+            <p className="max-w-xl text-[15px] leading-relaxed text-muted">
+              Tell me what you&apos;re building, the problem you want to solve,
+              and where you need a partner in strategy, design, or engineering.
+            </p>
           </div>
 
           {/* Form + contact info row */}
-          <div className='flex gap-16 max-[900px]:flex-col'>
+          <div className="flex gap-16 max-[900px]:flex-col">
             {/* Form */}
-            <div className='flex flex-col gap-8 w-[689px] max-[900px]:w-full shrink-0'>
+            <div className="flex flex-col gap-8 min-w-0 flex-[2] max-[900px]:w-full">
               {/* Full Name */}
-              <div className='flex flex-col gap-2'>
-                <label className='font-space-mono text-[13px] tracking-[0.88px] uppercase text-foreground'>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="contact-name"
+                  className="font-space-mono text-[13px] tracking-[0.88px] uppercase text-foreground"
+                >
                   FULL NAME
                 </label>
                 <input
-                  type='text'
-                  name='name'
+                  id="contact-name"
+                  type="text"
+                  name="name"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder='Your full name'
+                  placeholder="Your full name"
                   aria-invalid={Boolean(errors.name)}
                   className={inputClass}
                 />
                 {errors.name ? (
-                  <p className='text-sm text-rose-500'>{errors.name}</p>
+                  <p className="text-sm text-rose-500">{errors.name}</p>
                 ) : null}
               </div>
 
               {/* Email */}
-              <div className='flex flex-col gap-2'>
-                <label className='font-space-mono text-[13px] tracking-[0.88px] uppercase text-foreground'>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="contact-email"
+                  className="font-space-mono text-[13px] tracking-[0.88px] uppercase text-foreground"
+                >
                   EMAIL ADDRESS
                 </label>
                 <input
-                  type='email'
-                  name='email'
+                  id="contact-email"
+                  type="email"
+                  name="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder='your@email.com'
+                  placeholder="your@email.com"
                   aria-invalid={Boolean(errors.email)}
                   className={inputClass}
                 />
                 {errors.email ? (
-                  <p className='text-sm text-rose-500'>{errors.email}</p>
+                  <p className="text-sm text-rose-500">{errors.email}</p>
                 ) : null}
               </div>
 
               {/* Subject */}
-              <div className='flex flex-col gap-2'>
-                <label className='font-space-mono text-[13px] tracking-[0.88px] uppercase text-foreground'>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="contact-subject"
+                  className="font-space-mono text-[13px] tracking-[0.88px] uppercase text-foreground"
+                >
                   SUBJECT
                 </label>
                 <input
-                  type='text'
-                  name='subject'
+                  id="contact-subject"
+                  type="text"
+                  name="subject"
                   value={form.subject}
                   onChange={handleChange}
                   placeholder="What's this about?"
@@ -163,21 +179,25 @@ export default function Contact() {
               </div>
 
               {/* Message */}
-              <div className='flex flex-col gap-2'>
-                <label className='font-space-mono text-[13px] tracking-[0.88px] uppercase text-foreground'>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="contact-message"
+                  className="font-space-mono text-[13px] tracking-[0.88px] uppercase text-foreground"
+                >
                   MESSAGE
                 </label>
                 <textarea
-                  name='message'
+                  id="contact-message"
+                  name="message"
                   value={form.message}
                   onChange={handleChange}
-                  placeholder='Tell me about your project...'
+                  placeholder="Tell me about your project..."
                   rows={5}
                   aria-invalid={Boolean(errors.message)}
                   className={`${inputClass} resize-none`}
                 />
                 {errors.message ? (
-                  <p className='text-sm text-rose-500'>{errors.message}</p>
+                  <p className="text-sm text-rose-500">{errors.message}</p>
                 ) : null}
               </div>
 
@@ -185,7 +205,8 @@ export default function Contact() {
               <button
                 onClick={handleSubmit}
                 disabled={status === "sending"}
-                className='self-start inline-flex items-center gap-3 border border-foreground text-foreground font-dm-sans font-medium text-[13px] uppercase tracking-wide px-4 py-2 rounded-full hover:bg-foreground hover:text-white transition-colors duration-200 disabled:opacity-50 cursor-pointer'>
+                className="self-start inline-flex items-center gap-3 border border-foreground text-foreground font-dm-sans font-medium text-[13px] uppercase tracking-wide px-4 py-2 rounded-full hover:bg-foreground hover:text-white transition-colors duration-200 disabled:opacity-50 cursor-pointer"
+              >
                 {status === "sending"
                   ? "Sending..."
                   : status === "sent"
@@ -194,47 +215,49 @@ export default function Contact() {
                 <SendHorizontal size={16} strokeWidth={1.5} />
               </button>
               {status === "sent" ? (
-                <p className='mt-3 text-sm text-green-700'>
+                <p className="mt-3 text-sm text-green-700">
                   Mail sent successfully! I will get back to you soon.
                 </p>
               ) : null}
               {submitError ? (
-                <p className='mt-3 text-sm text-rose-500'>{submitError}</p>
+                <p className="mt-3 text-sm text-rose-500">{submitError}</p>
               ) : null}
             </div>
 
             {/* Contact info */}
-            <div className='flex flex-col gap-8 flex-1'>
+            <div className="flex flex-col gap-8 min-w-0 flex-1 break-words">
               {/* Email */}
-              <div className='flex flex-col gap-1'>
-                <p className='font-dm-sans font-medium text-[16px] text-foreground'>
+              <div className="flex flex-col gap-1">
+                <p className="font-dm-sans font-medium text-[16px] text-foreground">
                   Email
                 </p>
                 <Link
                   href={`mailto:${siteConfig.email}`}
-                  className='font-dm-sans text-[14px] text-muted hover:text-foreground transition-colors'>
+                  className="font-dm-sans text-[14px] text-muted hover:text-foreground transition-colors"
+                >
                   {siteConfig.email}
                 </Link>
               </div>
 
               {/* Phone */}
-              <div className='flex flex-col gap-1'>
-                <p className='font-dm-sans font-medium text-[16px] text-foreground'>
+              <div className="flex flex-col gap-1">
+                <p className="font-dm-sans font-medium text-[16px] text-foreground">
                   Phone Number
                 </p>
                 <Link
                   href={`tel:${siteConfig.phone}`}
-                  className='font-dm-sans text-[14px] text-muted hover:text-foreground transition-colors'>
+                  className="font-dm-sans text-[14px] text-muted hover:text-foreground transition-colors"
+                >
                   {siteConfig.phone}
                 </Link>
               </div>
 
               {/* Socials */}
-              <div className='flex flex-col gap-2'>
-                <p className='font-dm-sans font-medium text-[16px] text-foreground'>
+              <div className="flex flex-col gap-2">
+                <p className="font-dm-sans font-medium text-[16px] text-foreground">
                   SOCIALS
                 </p>
-                <div className='flex flex-col gap-1'>
+                <div className="flex flex-col gap-1">
                   {[
                     { label: "LinkedIn", href: siteConfig.socials.linkedin },
                     { label: "Behance", href: siteConfig.socials.behance },
@@ -246,9 +269,10 @@ export default function Contact() {
                     <Link
                       key={s.label}
                       href={s.href}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='font-space-mono text-[12px] tracking-[0.96px] uppercase text-muted hover:text-foreground transition-colors'>
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-space-mono text-[12px] tracking-[0.96px] uppercase text-muted hover:text-foreground transition-colors"
+                    >
                       {s.label}
                     </Link>
                   ))}
