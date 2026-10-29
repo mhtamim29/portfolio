@@ -8,6 +8,7 @@
 export const siteConfig = {
   name: "Makibul Hossain Tamim",
   initials: "MHT",
+  url: "https://makibul-hossain-tamim.vercel.app",
   title: "CEO & Co-Founder, Zentura",
   role: "CEO & Co-Founder at Zentura",
   headline: "Turning ideas into thoughtful digital products.",
