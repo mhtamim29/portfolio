@@ -17,15 +17,6 @@ export default function Hero() {
             <p className="mt-7 max-w-xl text-base leading-relaxed text-muted">
               {siteConfig.tagline}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#projects" className="button-primary">
-                View Selected Work{" "}
-                <ArrowDownRight size={17} aria-hidden="true" />
-              </a>
-              <a href="#contact" className="button-secondary">
-                Discuss a Project <ArrowUpRight size={17} aria-hidden="true" />
-              </a>
-            </div>
           </div>
           <div className="relative mx-auto w-full max-w-[400px]">
             <div className="relative aspect-square overflow-hidden rounded-sm border border-border">
@@ -41,8 +32,19 @@ export default function Hero() {
             <p className="label mt-4">{siteConfig.location}</p>
           </div>
         </div>
-        <div className="mt-14 flex flex-wrap items-center justify-between gap-6 border-t border-border pt-6">
-          <SocialIcons variant="dark" />
+        <div className="mt-12 grid items-center gap-6 md:mt-14 min-[1000px]:grid-cols-[1.5fr_1fr] min-[1000px]:gap-12">
+          <div className="flex flex-wrap items-center gap-3">
+            <a href="#projects" className="button-primary">
+              View Selected Work{" "}
+              <ArrowDownRight size={17} aria-hidden="true" />
+            </a>
+            <a href="#contact" className="button-secondary">
+              Discuss a Project <ArrowUpRight size={17} aria-hidden="true" />
+            </a>
+          </div>
+          <div className="w-full min-[1000px]:mx-auto min-[1000px]:max-w-[400px]">
+            <SocialIcons variant="dark" />
+          </div>
         </div>
       </div>
     </section>
